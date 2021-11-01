@@ -23,11 +23,13 @@ public class Main {
                     System.out.println("podaj wzrost w m");
                     double heightt = reader.nextDouble();
                     double BMIresult=database.calculateBmi(weightt, heightt);
+                    System.out.println("Twoje BMI:");
                     BMIresult=Math.round(BMIresult);
                     System.out.println(BMIresult);
                     int size=database.showSizeBmi();
                     database.addKeyListKey(size);
                     Bmi bmi=database.addBmi(heightt,weightt,size,BMIresult);
+                    System.out.println("Twoj unikalny numer urzytkownika: "+size);
 
                     if(BMIresult<18.5) {
                         System.out.println("Posiadasz niedowage");
